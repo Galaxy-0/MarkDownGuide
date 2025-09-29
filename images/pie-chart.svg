@@ -1,0 +1,81 @@
+<svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+  <title>技术栈使用占比饼图</title>
+
+  <!-- 背景 -->
+  <rect width="500" height="400" fill="#f8f9fa"/>
+
+  <!-- 标题 -->
+  <text x="250" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">
+    前端技术栈使用占比
+  </text>
+
+  <!-- 定义渐变 -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 饼图中心点 -->
+  <g transform="translate(180, 200)">
+    <!-- React 35% -->
+    <path d="M 0,0 L 100,0 A 100,100 0 0,1 -62.35,78.18 Z" fill="url(#grad1)" stroke="white" stroke-width="2"/>
+    <text x="30" y="-20" font-size="14" fill="white" font-weight="bold">35%</text>
+
+    <!-- Vue 25% -->
+    <path d="M 0,0 L -62.35,78.18 A 100,100 0 0,1 -97.49,-22.25 Z" fill="url(#grad2)" stroke="white" stroke-width="2"/>
+    <text x="-70" y="40" font-size="14" fill="white" font-weight="bold">25%</text>
+
+    <!-- Angular 20% -->
+    <path d="M 0,0 L -97.49,-22.25 A 100,100 0 0,1 -30.9,-95.11 Z" fill="url(#grad3)" stroke="white" stroke-width="2"/>
+    <text x="-50" y="-50" font-size="14" fill="white" font-weight="bold">20%</text>
+
+    <!-- Svelte 12% -->
+    <path d="M 0,0 L -30.9,-95.11 A 100,100 0 0,1 66.91,-74.31 Z" fill="url(#grad4)" stroke="white" stroke-width="2"/>
+    <text x="10" y="-80" font-size="14" fill="white" font-weight="bold">12%</text>
+
+    <!-- 其他 8% -->
+    <path d="M 0,0 L 66.91,-74.31 A 100,100 0 0,1 100,0 Z" fill="url(#grad5)" stroke="white" stroke-width="2"/>
+    <text x="70" y="-35" font-size="14" fill="white" font-weight="bold">8%</text>
+  </g>
+
+  <!-- 图例 -->
+  <g transform="translate(320, 150)">
+    <rect x="0" y="0" width="20" height="15" fill="url(#grad1)"/>
+    <text x="25" y="12" font-size="14" fill="#333">React</text>
+
+    <rect x="0" y="30" width="20" height="15" fill="url(#grad2)"/>
+    <text x="25" y="42" font-size="14" fill="#333">Vue</text>
+
+    <rect x="0" y="60" width="20" height="15" fill="url(#grad3)"/>
+    <text x="25" y="72" font-size="14" fill="#333">Angular</text>
+
+    <rect x="0" y="90" width="20" height="15" fill="url(#grad4)"/>
+    <text x="25" y="102" font-size="14" fill="#333">Svelte</text>
+
+    <rect x="0" y="120" width="20" height="15" fill="url(#grad5)"/>
+    <text x="25" y="132" font-size="14" fill="#333">其他</text>
+  </g>
+
+  <!-- 底部说明 -->
+  <text x="250" y="370" text-anchor="middle" font-size="12" fill="#666">
+    数据来源：2024年前端框架使用调查
+  </text>
+</svg>

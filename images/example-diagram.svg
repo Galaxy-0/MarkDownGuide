@@ -1,0 +1,50 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="400" height="300" fill="#f0f8ff"/>
+
+  <!-- 标题 -->
+  <text x="200" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">
+    Markdown 工作流程图
+  </text>
+
+  <!-- 第一个框：编写 -->
+  <rect x="50" y="60" width="120" height="60" fill="#4CAF50" rx="5"/>
+  <text x="110" y="95" text-anchor="middle" font-size="16" fill="white">
+    编写 .md 文件
+  </text>
+
+  <!-- 箭头1 -->
+  <path d="M 170 90 L 210 90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- 第二个框：解析 -->
+  <rect x="210" y="60" width="120" height="60" fill="#2196F3" rx="5"/>
+  <text x="270" y="95" text-anchor="middle" font-size="16" fill="white">
+    Markdown 解析
+  </text>
+
+  <!-- 箭头2 -->
+  <path d="M 270 120 L 270 160" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- 第三个框：输出 -->
+  <rect x="210" y="160" width="120" height="60" fill="#FF9800" rx="5"/>
+  <text x="270" y="195" text-anchor="middle" font-size="16" fill="white">
+    HTML 输出
+  </text>
+
+  <!-- 图标示例 -->
+  <circle cx="100" cy="250" r="20" fill="#E91E63"/>
+  <text x="100" y="257" text-anchor="middle" font-size="20" fill="white">1</text>
+
+  <circle cx="200" cy="250" r="20" fill="#9C27B0"/>
+  <text x="200" y="257" text-anchor="middle" font-size="20" fill="white">2</text>
+
+  <circle cx="300" cy="250" r="20" fill="#673AB7"/>
+  <text x="300" y="257" text-anchor="middle" font-size="20" fill="white">3</text>
+
+  <!-- 箭头标记定义 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

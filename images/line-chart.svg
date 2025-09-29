@@ -1,0 +1,108 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <title>网站访问量趋势图</title>
+
+  <!-- 背景 -->
+  <rect width="600" height="400" fill="#fafafa"/>
+
+  <!-- 标题 -->
+  <text x="300" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">
+    网站月度访问量趋势（2024年）
+  </text>
+
+  <!-- 网格线 -->
+  <g stroke="#e0e0e0" stroke-width="1" opacity="0.5">
+    <!-- 横向网格线 -->
+    <line x1="80" y1="80" x2="520" y2="80"/>
+    <line x1="80" y1="130" x2="520" y2="130"/>
+    <line x1="80" y1="180" x2="520" y2="180"/>
+    <line x1="80" y1="230" x2="520" y2="230"/>
+    <line x1="80" y1="280" x2="520" y2="280"/>
+    <line x1="80" y1="330" x2="520" y2="330"/>
+
+    <!-- 纵向网格线 -->
+    <line x1="120" y1="80" x2="120" y2="330"/>
+    <line x1="180" y1="80" x2="180" y2="330"/>
+    <line x1="240" y1="80" x2="240" y2="330"/>
+    <line x1="300" y1="80" x2="300" y2="330"/>
+    <line x1="360" y1="80" x2="360" y2="330"/>
+    <line x1="420" y1="80" x2="420" y2="330"/>
+    <line x1="480" y1="80" x2="480" y2="330"/>
+  </g>
+
+  <!-- 坐标轴 -->
+  <g stroke="#333" stroke-width="2">
+    <line x1="80" y1="80" x2="80" y2="330"/>
+    <line x1="80" y1="330" x2="520" y2="330"/>
+  </g>
+
+  <!-- Y轴标签 -->
+  <g font-size="12" fill="#666" text-anchor="end">
+    <text x="70" y="85">100k</text>
+    <text x="70" y="135">80k</text>
+    <text x="70" y="185">60k</text>
+    <text x="70" y="235">40k</text>
+    <text x="70" y="285">20k</text>
+    <text x="70" y="335">0</text>
+  </g>
+
+  <!-- X轴标签 -->
+  <g font-size="12" fill="#666" text-anchor="middle">
+    <text x="120" y="350">1月</text>
+    <text x="180" y="350">2月</text>
+    <text x="240" y="350">3月</text>
+    <text x="300" y="350">4月</text>
+    <text x="360" y="350">5月</text>
+    <text x="420" y="350">6月</text>
+    <text x="480" y="350">7月</text>
+  </g>
+
+  <!-- 数据线1：总访问量 -->
+  <polyline
+    points="120,250 180,220 240,180 300,150 360,140 420,120 480,100"
+    fill="none"
+    stroke="#4285f4"
+    stroke-width="3"
+  />
+
+  <!-- 数据点1 -->
+  <g fill="#4285f4">
+    <circle cx="120" cy="250" r="5"/>
+    <circle cx="180" cy="220" r="5"/>
+    <circle cx="240" cy="180" r="5"/>
+    <circle cx="300" cy="150" r="5"/>
+    <circle cx="360" cy="140" r="5"/>
+    <circle cx="420" cy="120" r="5"/>
+    <circle cx="480" cy="100" r="5"/>
+  </g>
+
+  <!-- 数据线2：移动端访问量 -->
+  <polyline
+    points="120,280 180,260 240,240 300,220 360,210 420,195 480,180"
+    fill="none"
+    stroke="#34a853"
+    stroke-width="3"
+    stroke-dasharray="5,5"
+  />
+
+  <!-- 数据点2 -->
+  <g fill="#34a853">
+    <rect x="115" y="275" width="10" height="10"/>
+    <rect x="175" y="255" width="10" height="10"/>
+    <rect x="235" y="235" width="10" height="10"/>
+    <rect x="295" y="215" width="10" height="10"/>
+    <rect x="355" y="205" width="10" height="10"/>
+    <rect x="415" y="190" width="10" height="10"/>
+    <rect x="475" y="175" width="10" height="10"/>
+  </g>
+
+  <!-- 图例 -->
+  <g transform="translate(200, 365)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#4285f4" stroke-width="3"/>
+    <circle cx="15" cy="0" r="5" fill="#4285f4"/>
+    <text x="35" y="5" font-size="14" fill="#333">总访问量</text>
+
+    <line x1="120" y1="0" x2="150" y2="0" stroke="#34a853" stroke-width="3" stroke-dasharray="5,5"/>
+    <rect x="130" y="-5" width="10" height="10" fill="#34a853"/>
+    <text x="155" y="5" font-size="14" fill="#333">移动端访问</text>
+  </g>
+</svg>

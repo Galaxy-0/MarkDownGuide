@@ -1,0 +1,142 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <title>数据仪表盘</title>
+
+  <!-- 定义渐变和滤镜 -->
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ee0979;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6a00;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 阴影滤镜 -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f5f7fa"/>
+
+  <!-- 标题区域 -->
+  <rect width="800" height="60" fill="#2c3e50"/>
+  <text x="400" y="38" text-anchor="middle" font-size="24" font-weight="bold" fill="white">
+    业务数据监控仪表盘
+  </text>
+
+  <!-- 卡片1：销售额 -->
+  <g transform="translate(50, 100)">
+    <rect width="160" height="120" fill="white" rx="8" filter="url(#shadow)"/>
+    <text x="80" y="30" text-anchor="middle" font-size="14" fill="#7f8c8d">本月销售额</text>
+    <text x="80" y="65" text-anchor="middle" font-size="32" font-weight="bold" fill="url(#blueGrad)">￥128K</text>
+    <text x="80" y="95" text-anchor="middle" font-size="12" fill="#27ae60">↑ 15.3%</text>
+  </g>
+
+  <!-- 卡片2：用户数 -->
+  <g transform="translate(230, 100)">
+    <rect width="160" height="120" fill="white" rx="8" filter="url(#shadow)"/>
+    <text x="80" y="30" text-anchor="middle" font-size="14" fill="#7f8c8d">活跃用户</text>
+    <text x="80" y="65" text-anchor="middle" font-size="32" font-weight="bold" fill="url(#greenGrad)">8,462</text>
+    <text x="80" y="95" text-anchor="middle" font-size="12" fill="#27ae60">↑ 8.7%</text>
+  </g>
+
+  <!-- 卡片3：转化率 -->
+  <g transform="translate(410, 100)">
+    <rect width="160" height="120" fill="white" rx="8" filter="url(#shadow)"/>
+    <text x="80" y="30" text-anchor="middle" font-size="14" fill="#7f8c8d">转化率</text>
+    <text x="80" y="65" text-anchor="middle" font-size="32" font-weight="bold" fill="url(#redGrad)">3.45%</text>
+    <text x="80" y="95" text-anchor="middle" font-size="12" fill="#e74c3c">↓ 2.1%</text>
+  </g>
+
+  <!-- 卡片4：平均订单 -->
+  <g transform="translate(590, 100)">
+    <rect width="160" height="120" fill="white" rx="8" filter="url(#shadow)"/>
+    <text x="80" y="30" text-anchor="middle" font-size="14" fill="#7f8c8d">平均订单</text>
+    <text x="80" y="65" text-anchor="middle" font-size="32" font-weight="bold" fill="#9b59b6">￥452</text>
+    <text x="80" y="95" text-anchor="middle" font-size="12" fill="#27ae60">↑ 5.2%</text>
+  </g>
+
+  <!-- 环形进度图1 -->
+  <g transform="translate(150, 350)">
+    <text x="0" y="-60" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">任务完成度</text>
+
+    <!-- 背景圆环 -->
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#ecf0f1" stroke-width="15"/>
+
+    <!-- 进度圆环 -->
+    <circle cx="0" cy="0" r="60" fill="none"
+            stroke="url(#blueGrad)" stroke-width="15"
+            stroke-dasharray="282.7 94.2"
+            stroke-dashoffset="70.7"
+            transform="rotate(-90)"/>
+
+    <!-- 中心文字 -->
+    <text x="0" y="5" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">75%</text>
+  </g>
+
+  <!-- 环形进度图2 -->
+  <g transform="translate(400, 350)">
+    <text x="0" y="-60" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">服务器负载</text>
+
+    <!-- 背景圆环 -->
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#ecf0f1" stroke-width="15"/>
+
+    <!-- 进度圆环 -->
+    <circle cx="0" cy="0" r="60" fill="none"
+            stroke="url(#greenGrad)" stroke-width="15"
+            stroke-dasharray="226.2 150.8"
+            stroke-dashoffset="70.7"
+            transform="rotate(-90)"/>
+
+    <!-- 中心文字 -->
+    <text x="0" y="5" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">60%</text>
+  </g>
+
+  <!-- 环形进度图3 -->
+  <g transform="translate(650, 350)">
+    <text x="0" y="-60" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">存储使用</text>
+
+    <!-- 背景圆环 -->
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#ecf0f1" stroke-width="15"/>
+
+    <!-- 进度圆环 -->
+    <circle cx="0" cy="0" r="60" fill="none"
+            stroke="url(#redGrad)" stroke-width="15"
+            stroke-dasharray="169.6 207.4"
+            stroke-dashoffset="70.7"
+            transform="rotate(-90)"/>
+
+    <!-- 中心文字 -->
+    <text x="0" y="5" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">45%</text>
+  </g>
+
+  <!-- 迷你柱状图 -->
+  <g transform="translate(50, 480)">
+    <text x="350" y="0" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">最近7天数据</text>
+
+    <rect x="100" y="60" width="30" height="40" fill="#3498db" opacity="0.7"/>
+    <rect x="150" y="45" width="30" height="55" fill="#3498db" opacity="0.7"/>
+    <rect x="200" y="50" width="30" height="50" fill="#3498db" opacity="0.7"/>
+    <rect x="250" y="30" width="30" height="70" fill="#3498db" opacity="0.7"/>
+    <rect x="300" y="40" width="30" height="60" fill="#3498db" opacity="0.7"/>
+    <rect x="350" y="35" width="30" height="65" fill="#3498db" opacity="0.7"/>
+    <rect x="400" y="20" width="30" height="80" fill="#27ae60"/>
+    <rect x="450" y="25" width="30" height="75" fill="#3498db" opacity="0.7"/>
+    <rect x="500" y="45" width="30" height="55" fill="#3498db" opacity="0.7"/>
+    <rect x="550" y="55" width="30" height="45" fill="#3498db" opacity="0.7"/>
+    <rect x="600" y="50" width="30" height="50" fill="#3498db" opacity="0.7"/>
+
+    <!-- X轴标签 -->
+    <g font-size="10" fill="#7f8c8d" text-anchor="middle">
+      <text x="415" y="115">今天</text>
+    </g>
+  </g>
+</svg>

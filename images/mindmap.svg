@@ -1,0 +1,154 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <title>Markdown 学习思维导图</title>
+
+  <!-- 定义渐变 -->
+  <defs>
+    <radialGradient id="centerGrad">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </radialGradient>
+
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+
+  <!-- 连接线 -->
+  <g stroke="#95a5a6" stroke-width="2" fill="none">
+    <!-- 基础语法分支 -->
+    <path d="M 450,300 Q 350,200 250,150"/>
+    <line x1="250" y1="150" x2="200" y2="100"/>
+    <line x1="250" y1="150" x2="200" y2="140"/>
+    <line x1="250" y1="150" x2="200" y2="180"/>
+
+    <!-- 高级功能分支 -->
+    <path d="M 450,300 Q 550,200 650,150"/>
+    <line x1="650" y1="150" x2="700" y2="100"/>
+    <line x1="650" y1="150" x2="700" y2="140"/>
+    <line x1="650" y1="150" x2="700" y2="180"/>
+
+    <!-- 实践应用分支 -->
+    <path d="M 450,300 Q 350,400 250,450"/>
+    <line x1="250" y1="450" x2="200" y2="420"/>
+    <line x1="250" y1="450" x2="200" y2="460"/>
+    <line x1="250" y1="450" x2="200" y2="500"/>
+
+    <!-- 工具资源分支 -->
+    <path d="M 450,300 Q 550,400 650,450"/>
+    <line x1="650" y1="450" x2="700" y2="420"/>
+    <line x1="650" y1="450" x2="700" y2="460"/>
+    <line x1="650" y1="450" x2="700" y2="500"/>
+
+    <!-- 扩展语法分支 -->
+    <line x1="450" y1="250" x2="450" y2="150"/>
+    <line x1="450" y1="150" x2="400" y2="100"/>
+    <line x1="450" y1="150" x2="500" y2="100"/>
+  </g>
+
+  <!-- 中心节点 -->
+  <g transform="translate(450, 300)">
+    <circle r="50" fill="url(#centerGrad)" filter="url(#shadow)"/>
+    <text x="0" y="5" text-anchor="middle" font-size="18" font-weight="bold" fill="white">Markdown</text>
+  </g>
+
+  <!-- 基础语法节点 -->
+  <g transform="translate(250, 150)">
+    <ellipse rx="45" ry="25" fill="#3498db" filter="url(#shadow)"/>
+    <text x="0" y="5" text-anchor="middle" font-size="14" fill="white">基础语法</text>
+  </g>
+
+  <!-- 基础语法子节点 -->
+  <g fill="#e8f4f8" filter="url(#shadow)">
+    <rect x="80" y="85" width="80" height="30" rx="15"/>
+    <rect x="80" y="125" width="80" height="30" rx="15"/>
+    <rect x="80" y="165" width="80" height="30" rx="15"/>
+  </g>
+  <g font-size="12" fill="#2c3e50">
+    <text x="120" y="104" text-anchor="middle">标题段落</text>
+    <text x="120" y="144" text-anchor="middle">列表引用</text>
+    <text x="120" y="184" text-anchor="middle">强调斜体</text>
+  </g>
+
+  <!-- 高级功能节点 -->
+  <g transform="translate(650, 150)">
+    <ellipse rx="45" ry="25" fill="#e74c3c" filter="url(#shadow)"/>
+    <text x="0" y="5" text-anchor="middle" font-size="14" fill="white">高级功能</text>
+  </g>
+
+  <!-- 高级功能子节点 -->
+  <g fill="#ffeee9" filter="url(#shadow)">
+    <rect x="700" y="85" width="80" height="30" rx="15"/>
+    <rect x="700" y="125" width="80" height="30" rx="15"/>
+    <rect x="700" y="165" width="80" height="30" rx="15"/>
+  </g>
+  <g font-size="12" fill="#2c3e50">
+    <text x="740" y="104" text-anchor="middle">表格图表</text>
+    <text x="740" y="144" text-anchor="middle">代码高亮</text>
+    <text x="740" y="184" text-anchor="middle">任务列表</text>
+  </g>
+
+  <!-- 扩展语法节点 -->
+  <g transform="translate(450, 150)">
+    <ellipse rx="45" ry="25" fill="#9b59b6" filter="url(#shadow)"/>
+    <text x="0" y="5" text-anchor="middle" font-size="14" fill="white">扩展语法</text>
+  </g>
+
+  <!-- 扩展语法子节点 -->
+  <g fill="#f4ecf7" filter="url(#shadow)">
+    <rect x="340" y="85" width="80" height="30" rx="15"/>
+    <rect x="480" y="85" width="80" height="30" rx="15"/>
+  </g>
+  <g font-size="12" fill="#2c3e50">
+    <text x="380" y="104" text-anchor="middle">数学公式</text>
+    <text x="520" y="104" text-anchor="middle">流程图</text>
+  </g>
+
+  <!-- 实践应用节点 -->
+  <g transform="translate(250, 450)">
+    <ellipse rx="45" ry="25" fill="#27ae60" filter="url(#shadow)"/>
+    <text x="0" y="5" text-anchor="middle" font-size="14" fill="white">实践应用</text>
+  </g>
+
+  <!-- 实践应用子节点 -->
+  <g fill="#e8f5e9" filter="url(#shadow)">
+    <rect x="80" y="405" width="80" height="30" rx="15"/>
+    <rect x="80" y="445" width="80" height="30" rx="15"/>
+    <rect x="80" y="485" width="80" height="30" rx="15"/>
+  </g>
+  <g font-size="12" fill="#2c3e50">
+    <text x="120" y="424" text-anchor="middle">技术文档</text>
+    <text x="120" y="464" text-anchor="middle">博客写作</text>
+    <text x="120" y="504" text-anchor="middle">笔记管理</text>
+  </g>
+
+  <!-- 工具资源节点 -->
+  <g transform="translate(650, 450)">
+    <ellipse rx="45" ry="25" fill="#f39c12" filter="url(#shadow)"/>
+    <text x="0" y="5" text-anchor="middle" font-size="14" fill="white">工具资源</text>
+  </g>
+
+  <!-- 工具资源子节点 -->
+  <g fill="#fff3e0" filter="url(#shadow)">
+    <rect x="700" y="405" width="80" height="30" rx="15"/>
+    <rect x="700" y="445" width="80" height="30" rx="15"/>
+    <rect x="700" y="485" width="80" height="30" rx="15"/>
+  </g>
+  <g font-size="12" fill="#2c3e50">
+    <text x="740" y="424" text-anchor="middle">编辑器</text>
+    <text x="740" y="464" text-anchor="middle">转换工具</text>
+    <text x="740" y="504" text-anchor="middle">在线平台</text>
+  </g>
+
+  <!-- 标题 -->
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">
+    Markdown 学习路径图
+  </text>
+
+  <!-- 说明文字 -->
+  <text x="450" y="570" text-anchor="middle" font-size="12" fill="#7f8c8d">
+    从中心开始，向外延伸学习各个分支内容
+  </text>
+</svg>

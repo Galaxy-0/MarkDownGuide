@@ -1,0 +1,107 @@
+<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
+  <title>用户登录流程图</title>
+
+  <!-- 定义箭头标记 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+
+    <!-- 定义阴影 -->
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="700" height="500" fill="#f0f4f8"/>
+
+  <!-- 标题 -->
+  <text x="350" y="30" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50">
+    用户登录验证流程
+  </text>
+
+  <!-- 开始节点 -->
+  <ellipse cx="350" cy="80" rx="50" ry="25" fill="#27ae60" filter="url(#shadow)"/>
+  <text x="350" y="85" text-anchor="middle" font-size="14" fill="white" font-weight="bold">开始</text>
+
+  <!-- 输入用户名密码 -->
+  <rect x="275" y="130" width="150" height="50" fill="#3498db" rx="5" filter="url(#shadow)"/>
+  <text x="350" y="160" text-anchor="middle" font-size="14" fill="white">输入用户名密码</text>
+
+  <!-- 决策：验证信息 -->
+  <path d="M 350,220 L 420,260 L 350,300 L 280,260 Z" fill="#e74c3c" filter="url(#shadow)"/>
+  <text x="350" y="260" text-anchor="middle" font-size="13" fill="white">
+    <tspan x="350" dy="0">信息</tspan>
+    <tspan x="350" dy="15">正确？</tspan>
+  </text>
+
+  <!-- 验证失败 -->
+  <rect x="120" y="235" width="120" height="50" fill="#95a5a6" rx="5" filter="url(#shadow)"/>
+  <text x="180" y="265" text-anchor="middle" font-size="14" fill="white">显示错误信息</text>
+
+  <!-- 验证成功：检查权限 -->
+  <rect x="460" y="235" width="120" height="50" fill="#9b59b6" rx="5" filter="url(#shadow)"/>
+  <text x="520" y="265" text-anchor="middle" font-size="14" fill="white">检查用户权限</text>
+
+  <!-- 决策：是否需要双因素认证 -->
+  <path d="M 520,330 L 590,370 L 520,410 L 450,370 Z" fill="#f39c12" filter="url(#shadow)"/>
+  <text x="520" y="370" text-anchor="middle" font-size="13" fill="white">
+    <tspan x="520" dy="0">需要</tspan>
+    <tspan x="520" dy="15">2FA？</tspan>
+  </text>
+
+  <!-- 双因素认证 -->
+  <rect x="290" y="380" width="120" height="50" fill="#16a085" rx="5" filter="url(#shadow)"/>
+  <text x="350" y="410" text-anchor="middle" font-size="14" fill="white">双因素认证</text>
+
+  <!-- 登录成功 -->
+  <rect x="460" y="440" width="120" height="50" fill="#27ae60" rx="5" filter="url(#shadow)"/>
+  <text x="520" y="470" text-anchor="middle" font-size="14" fill="white">登录成功</text>
+
+  <!-- 结束节点 -->
+  <ellipse cx="180" cy="460" rx="50" ry="25" fill="#c0392b" filter="url(#shadow)"/>
+  <text x="180" y="465" text-anchor="middle" font-size="14" fill="white" font-weight="bold">结束</text>
+
+  <!-- 连接线 -->
+  <g stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
+    <!-- 开始到输入 -->
+    <line x1="350" y1="105" x2="350" y2="130"/>
+
+    <!-- 输入到验证 -->
+    <line x1="350" y1="180" x2="350" y2="220"/>
+
+    <!-- 验证失败 -->
+    <line x1="280" y1="260" x2="240" y2="260"/>
+
+    <!-- 失败返回 -->
+    <path d="M 180,235 L 180,155 L 275,155"/>
+
+    <!-- 验证成功 -->
+    <line x1="420" y1="260" x2="460" y2="260"/>
+
+    <!-- 检查权限到2FA决策 -->
+    <line x1="520" y1="285" x2="520" y2="330"/>
+
+    <!-- 需要2FA -->
+    <line x1="450" y1="370" x2="410" y2="395"/>
+
+    <!-- 2FA完成 -->
+    <path d="M 350,430 L 350,465 L 460,465"/>
+
+    <!-- 不需要2FA -->
+    <line x1="520" y1="410" x2="520" y2="440"/>
+
+    <!-- 失败结束 -->
+    <line x1="180" y1="285" x2="180" y2="435"/>
+  </g>
+
+  <!-- 标注 -->
+  <g font-size="11" fill="#7f8c8d">
+    <text x="250" y="255">否</text>
+    <text x="430" y="255">是</text>
+    <text x="430" y="365">是</text>
+    <text x="525" y="430">否</text>
+    <text x="200" y="150">重试</text>
+  </g>
+</svg>
